@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}機動戰記-登錄{% endblock %}
+
+
+{% block page_content %}
+<div class="login-box">
+     <div class="col-md-4 col-md-offset-4">
+          <div class="page-header">
+          <h2>登錄</h2>
+          </div>
+          {{ wtf.quick_form(form) }}
+      <br>
+      <p>Forgot your password? <a href="#">Click here to reset it</a>.</p>
+      <p>New user? <a href="#">Click here to register</a>.</p>
+     </div>
+</div>
+{% endblock %}
+
+

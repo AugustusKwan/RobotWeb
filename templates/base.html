@@ -1,0 +1,61 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}激動戰記{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="shortcut icon" href="{{ url_for('static', filename='gundum.jepg') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='gundum.jepg') }}" type="image/x-icon">
+
+<!--<style type="text/css" href="static/style.css"></style>-->
+<link rel="stylesheet" href="static/style.css">
+{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">機動戰記</a>
+      </div>
+      
+      <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+               <li><a href="#">登錄</a></li>
+               <li><a href="#">注冊</a></li>
+            </ul>
+      </div>
+    </div>
+    </nav>  
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+  {% for message in get_flashed_messages() %}
+  <div class="alert alert-warning">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{ message }}
+  </div>
+  {% endfor %}
+  
+  {% block page_content %}{% endblock %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
+{% endblock %}
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+body{
+    background: url("/static/timg.jpg") ;
+    background-position: center 0; 
+     background-repeat: no-repeat;  
+     background-attachment: fixed; 
+     background-size: cover; 
+      -webkit-background-size: cover;  
+      -o-background-size: cover;  
+      -moz-background-size: cover;  
+      -ms-background-size: cover;
+}
+
+.login-box{
+    margin-top: 60px;
+    border-radius: 5px;
+    border-color: #3333FF;
+    border-width:15px;
+}
+
+.col-md-4{
+    background-color: aliceblue;
+    border-color: #3333FF;
+    border-width:15px;
+}
